@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alcón Milenario 3D</title>
+    <link rel="stylesheet" href="public/index.css">
+    <script async src="public/js/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+		      "three": "https://cdn.jsdelivr.net/npm/three@v0.163.0/build/three.module.js",
+		      "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.163.0/examples/jsm/",
+			  "rapier": ""
+		    }
+      }
+    </script>
+  </head>
+  <body>
+    
+<!-- Actualiza el HTML del panel de controles -->
+<div id="key-help" onclick="toggleControls(event)">
+  <div class="header">
+    <h1>Controles</h1>
+    <div class="collapse-icon">☰</div>
+  </div>
+  <div class="content">
+    <div class="key-row">
+      <span class="key">▲</span>
+      <span class="key-label">W / Flecha arriba</span>
+    </div>
+    <div class="key-row">
+      <span class="key">◄</span>
+      <span class="key">►</span>
+      <span class="key-label">A D / Flechas laterales</span>
+    </div>
+  </div>
+</div>
+
+    <!-- Controles -->
+    <div id="controls">
+      <button id="avanzar" class="arrow-btn">▲</button>
+      <button id="girarIzquierda" class="arrow-btn">◄</button>
+      <button id="girarDerecha" class="arrow-btn">►</button>
+      <!-- <button id="hiperSalto" class="hyper-btn">HIPER SALTO</button> -->
+    </div>
+    <div id="progress-container">
+      <div id="progress">Cargando Alcón Milenario...</div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
